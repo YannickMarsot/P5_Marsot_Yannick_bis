@@ -50,8 +50,6 @@ function validateEmail() {
   return false;
 }
 
-//affichage panier  (AJOUTER LA GESTION DES QTE DANS LE PANIER + AFFICHER ME TOTAL € DE NOTRE PANIER)
-
 function getLocalStorage() {
   const getProduct = JSON.parse(localStorage.getItem("cameras"));
   if (getProduct) {
@@ -61,18 +59,16 @@ function getLocalStorage() {
   }
 }
 const elementObjet = JSON.parse(localStorage.getItem("cameras"));
-function affichagePanier() {
+//avec JSON.parse on transforme un element JSON en objet javascript!!!
+function writeCart() {
+  //fonction qui affiche le panier
   if (elementObjet === null) {
     //affichage panier vide:
-    //console.log("je suis vide");
     document.querySelector("#petitContainerAffichagePanier").innerHTML = `
             <p>Pour l'instant vôtre panier est vide</p>
         `;
   } else {
     //affichage panier rempli:
-    console.log("je suis rempli");
-    console.log("elementObjet", elementObjet);
-    //avec JSON.parse on transforme un element JSON en objet javascript!!!
     elementObjet.forEach((element) => {
       const indexProduct = elementObjet.indexOf(element);
       console.log("indexProduct", indexProduct);
@@ -101,7 +97,6 @@ function affichagePanier() {
 //fonction pour ajouter un produit depuis le panier
 function addProduct(event) {
   const index = event.target.getAttribute("data-index");
-  console.log(index);
   elementObjet[index].qte++;
   localStorage.setItem("cameras", JSON.stringify(elementObjet));
   location.reload();
@@ -110,7 +105,6 @@ function addProduct(event) {
 //fonction pour supprimer un produit depuis le panier
 function delProduct(event) {
   const index = event.target.getAttribute("data-index");
-  console.log(index);
   if (elementObjet[index].qte > 1) {
     elementObjet[index].qte--;
   } else {
@@ -130,7 +124,6 @@ function sendContact() {
   let city = document.getElementById("City").value;
   let address = document.getElementById("adress").value;
   let email = document.getElementById("e-mail").value;
-  console.log(firstName, "sendData verification");
   let contact = {
     firstName,
     lastName,
@@ -139,11 +132,8 @@ function sendContact() {
     email,
   };
   const produits = getLocalStorage();
-  console.log(produits);
   let products = [];
-  //Faire une boucle pour push chaque id de produit
   produits.forEach((element) => products.push(element.id));
-
   const data = {
     contact,
     products,
@@ -161,11 +151,7 @@ function sendContact() {
     .then((res) => res.json())
     .then((res) => {
       console.log(res.orderId);
-      const OrderId = res.orderId;
-      //window.location = "confirmation.html";
-      //return orderId;
+      const orderId = res.orderId;
+      window.location = "confirmation.html?order=" + orderId;
     });
-
-  //récupérer l'id pour la page confirmation panier
-  //alert("vôtre commande à était envoyé!!!");
 }
