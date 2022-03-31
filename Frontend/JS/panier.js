@@ -114,7 +114,25 @@ function delProduct(event) {
   location.reload();
 }
 
-affichagePanier();
+// calcul du total
+const cart = JSON.parse(localStorage.getItem("cameras")) || [];
+function displayTotalCart() {
+  let totalCart = 0;
+  cart.forEach((cameras) => {
+    totalCart = totalCart + cameras.price * cameras.qte;
+  });
+  return totalCart;
+}
+
+function writeTotalCart() {
+  //fonction pour afficher le total du panier
+  totalCart = displayTotalCart();
+  console.log(totalCart);
+  document.querySelector("#display_total_here").innerHTML = `${totalCart}`;
+}
+
+writeTotalCart();
+writeCart();
 
 //envoyer les données à l'api
 
