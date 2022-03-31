@@ -1,0 +1,36 @@
+body {
+  #BlocPage {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    background-color: $color-secondary;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    @include respond-to(handhelds);
+    @include respond-to(medium-screens);
+    @include respond-to(wide-screens);
+    .maison {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: black !important;
+  }
+
+  #confirmation-text {
+    text-align: center;
+    margin-top: 25%;
+    margin-bottom: 25%;
+  }
+}

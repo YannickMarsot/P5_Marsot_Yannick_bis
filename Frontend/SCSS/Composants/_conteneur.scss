@@ -1,0 +1,146 @@
+.list-product {
+  padding-top: 20px;
+  .conteneur {
+    width: 40%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 4px 10px 8px #c1c1c1;
+    margin-bottom: 30px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 250px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
+    .petitConteneur {
+      padding-left: 5px;
+      padding-right: 5px;
+
+      p {
+        color: black;
+      }
+
+      .name {
+        font-weight: bold;
+      }
+
+      .description {
+        font-style: italic;
+      }
+
+      .showProductBtn {
+        p {
+          text-align: center;
+          width: 32%;
+          background-color: black;
+          border-radius: 15px;
+          color: white;
+          &:hover {
+            background-color: grey;
+            // background-color: linear-gradient(to left, #ebc191, #8f5bfd);
+          }
+        }
+      }
+    }
+  }
+
+  .grandConteneur {
+    width: 80%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 4px 10px 8px #c1c1c1;
+    margin-bottom: 30px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 500px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
+    .lensesConteneur {
+      margin-top: 5px;
+      background-color: lavender;
+      width: 30%;
+      border-radius: 9px;
+      text-align: center;
+    }
+
+    .quantityConteneur {
+      margin-top: 10px;
+      background-color: lavender;
+      width: 30%;
+      border-radius: 9px;
+      text-align: center;
+    }
+
+    .petitConteneur {
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-bottom: 10px;
+
+      p {
+        color: black;
+      }
+
+      .name {
+        font-weight: bold;
+      }
+
+      .description {
+        font-style: italic;
+      }
+
+      button {
+        text-align: center;
+        width: 32%;
+        background-color: black;
+        border-radius: 9px;
+        color: white;
+        &:hover {
+          background-color: grey;
+          // background-color: linear-gradient(to left, #ebc191, #8f5bfd);
+        }
+      }
+    }
+  }
+
+  #conteneurPanier {
+    width: 30%;
+    border-radius: 15px;
+    background-color: $color-primary;
+    box-shadow: 4px 10px 8px #c1c1c1;
+    margin-bottom: 30px;
+
+    #petitConteneurPanier {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+
+      p {
+        margin-top: 5px;
+      }
+
+      label {
+        margin-top: 5px;
+      }
+
+      button {
+        text-align: center;
+        margin-top: 5px;
+        width: 32%;
+        background-color: black;
+        border-radius: 9px;
+        color: white;
+        &:hover {
+          background-color: grey;
+          // background-color: linear-gradient(to left, #ebc191, #8f5bfd);
+        }
+      }
+    }
+  }
+}

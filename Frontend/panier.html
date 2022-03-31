@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Stylesheet" href="CSS/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/612c8c18de.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="JS/panier.js" defer></script>
+
+    <title>Panier</title>
+  </head>
+  <body>
+    <div id="BlocPage">
+      <header>
+        <!--ICI LA BARRE DE NAVIGATION BOOTSTRAP-->
+        <nav class="navbar">
+          <div class="container">
+            <a class="navbar-brand" href="Index.html">
+              <img
+                src="Logo/15675819263013_image1.webp"
+                alt="logo"
+                width="200"
+                height="100"
+              />
+            </a>
+          </div>
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Index.html"
+                >Acceuil<i class="fas fa-home"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="containerAffichagePanier">
+          <h2>Vôtre panier</h2>
+          <div id="petitContainerAffichagePanier">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">id</th>
+                  <th scope="col">size</th>
+                  <th scope="col">qte</th>
+                  <th scope="col">prix</th>
+                </tr>
+              </thead>
+              <tbody id="affPanier"></tbody>
+            </table>
+            <p>vôtre total est de <span id="display_total_here"></span></p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="list-product maison">
+            <div id="conteneurPanier">
+              <div id="petitConteneurPanier">
+                <p>Pour confirmer vôtre commande veuillez:</p>
+                <label>
+                  Entrer vôtre Prénom<br />
+                  <input
+                    id="text_prenom"
+                    name="first-name"
+                    type="text"
+                    value=""
+                    onchange="validateFirstName();"
+                  />
+                </label>
+                <label>
+                  Entrer vôtre Nom<br />
+                  <input
+                    id="text_nom"
+                    name="last-name"
+                    type="text"
+                    value=""
+                    onchange="validateLastName();"
+                  />
+                </label>
+                <label>
+                  Entrer vôtre Adresse<br />
+                  <input
+                    id="adress"
+                    name="adress"
+                    type="text"
+                    value=""
+                    onchange="validateAdress();"
+                  />
+                </label>
+                <label>
+                  Entrer vôtre Ville<br />
+                  <input
+                    id="City"
+                    name="city"
+                    type="text"
+                    value=""
+                    onchange="validateCity();"
+                  />
+                </label>
+                <label>
+                  Entrer vôtre E-mail<br />
+                  <input
+                    id="e-mail"
+                    name="e-mail"
+                    type="email"
+                    value=""
+                    onchange="validateEmail();"
+                  />
+                </label>
+                <button onclick="sendContact();">Envoyer</button>
+                <!--<button href="confirmation.html">Voir vôtre commande</button>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <!--ICI LE FOOTER REALISER AVEC BOOSTRAP-->
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"
+              >Contact
+              <i class="fas fa-phone"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Index.html">
+              Acceuil
+              <i class="fas fa-home"></i
+            ></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

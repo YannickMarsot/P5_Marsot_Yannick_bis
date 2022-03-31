@@ -1,0 +1,12 @@
+footer {
+  background-color: $color-primary;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  .fas.fa-phone,
+  .fas.fa-home {
+    margin-left: 5px;
+    color: black;
+  }
+}

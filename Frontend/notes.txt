@@ -1,0 +1,44 @@
+url api:
+http://localhost:3000/api/cameras
+
+A faire:
+_debuguer tout!
+_mocha (test js)
+_redirection confirmation.html avec orderId en parametre url
+_faire une boucle forEach pour totalPanier!
+
+
+
+Questions mentor:
+_
+
+ne marche pas:
+function button_disabled() {
+  //fonction pour ne pas ajouter des produits sans rien selectionner
+  const button = document.getElementById("addToCart-btn");
+  var quantity = document.getElementById("quantity");
+  console.log("quantity-btn", quantity);
+  var value_quantity = quantity.options[quantity.selectedIndex].value;
+  console.log("quantity-btn-value", value_quantity);
+  var lenses_selected = document.getElementById("lensesSelect");
+  console.log("lenses_selected", lenses_selected);
+  var sizeLenses_selected =
+    lenses_selected.option[lenses_selected.selectedIndex].value;
+  console.log("lenses-selected-size", sizeLenses_selected);
+  if ((value_quantity = 0)) {
+    button.disabled = true;
+  }
+  if ((sizeLenses_selected = 0)) {
+    button.disabled = true;
+  }
+}
+
+si jamais panier ligne 53: 
+// function getLocalStorage() {
+//   const getProduct = JSON.parse(localStorage.getItem("cameras"));
+//   if (getProduct) {
+//     return getProduct;
+//   } else {
+//     return false;
+//   }
+// }
