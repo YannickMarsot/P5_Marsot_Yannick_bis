@@ -87,14 +87,6 @@ function addToCart() {
     localStorage.setItem("cameras", JSON.stringify(cart));
   }
   alert("vôtre commande a été ajouté au panier");
-
-  //afin d'eviter de rajouter des produits = 0
-  // if (value_quantity != 0) {
-  //   button.disabled = false;
-  // }
-  // if (sizeLenses_selected != 0) {
-  //   button.disabled = false;
-  // }
 }
 
 getArticleById();
