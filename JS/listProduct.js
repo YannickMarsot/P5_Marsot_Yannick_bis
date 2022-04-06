@@ -12,7 +12,7 @@ function getArticle() {
         document.querySelector(".list-product").innerHTML += `
           <div class="conteneur" id="${article._id}">
             <div class="image">
-              <a href="http://127.0.0.1:5500/Frontend/produits.html?id=${article._id}">
+              <a href="http://127.0.0.1:5500/produits.html?id=${article._id}">
                 <img src="${article.imageUrl}">
               </a>
             </div>
@@ -20,7 +20,7 @@ function getArticle() {
               <p class="name">${article.name}</p>
               <p class="price">${article.price}
               <p class="description">${article.description}</p>
-              <a href="http://127.0.0.1:5500/Frontend/produits.html?id=${article._id}" title="show product" class="showProductBtn">
+              <a href="http://127.0.0.1:5500/produits.html?id=${article._id}" title="show product" class="showProductBtn">
               <p>Voir le produit</p>
               <a/>
             </div>
