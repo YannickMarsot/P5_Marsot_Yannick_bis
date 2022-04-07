@@ -62,8 +62,6 @@ function writeProduct(product) {
 const cart = JSON.parse(localStorage.getItem("cameras")) || [];
 
 //fonction dajout au panier
-const button = document.getElementById("addToCart-btn");
-//button.setAttribute("disabled");
 function addToCart() {
   let id_product = document.getElementsByClassName("grandConteneur"); //id dans "grand conteneur"
   let price_product = document.getElementsByClassName("price");
